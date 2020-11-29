@@ -12,7 +12,9 @@ deg <- degree(network, mode="all")
 
 list_deg <- lapply(split(deg,names(deg)),unname)
 
-deg_fil <- list_deg[list_deg > 14]
+seuil <- 14
+
+deg_fil <- list_deg[list_deg > seuil]
 
 length(deg_fil)
 
